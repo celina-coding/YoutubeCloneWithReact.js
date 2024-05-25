@@ -1,0 +1,41 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .profile__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .profile__photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile__info {
+    text-align: center;
+  }
+  
+  .profile__name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .profile__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .profile__description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
