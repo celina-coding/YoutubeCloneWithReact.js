@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './PlayVideo.css';
 
 import video1 from '../../assets/video.mp4';
@@ -8,6 +9,7 @@ import share from '../../assets/share.png';
 import save from '../../assets/save.png';
 import jack from '../../assets/jack.png';
 import user_profile from '../../assets/user_profile.jpg';
+import { useParams } from 'react-router-dom';
 
 const PlayVideo = () => {
    // State variables for like and dislike counts, and whether the video is liked/disliked
@@ -15,6 +17,10 @@ const PlayVideo = () => {
   const [dislikeCount, setDislikeCount] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
   const [viewCount, setViewCount] = useState(0);
+  const { videoId } = useParams(); // Obtenir l'ID de la vidéo depuis les paramètres d'URL
+  const [video, setVideo] = useState(null); // État pour stocker les détails de la vidéo
+  const [relatedVideos, setRelatedVideos] = useState([]); // État pour stocker les vidéos associées
+
 
   // No need for `isDisliked` state anymore
 
